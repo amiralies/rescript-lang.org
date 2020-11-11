@@ -283,8 +283,7 @@ let default = (props: props): React.element => {
 
   let content = if Belt.Array.length(posts) === 0 {
     /* <div> "Currently no posts available"->s </div>; */
-    <div
-      className="mt-8">
+    <div className="mt-8">
       <Markdown.H1> {"Blog not yet available"->s} </Markdown.H1>
       <Markdown.Warn> {"This blog is currently in the works."->s} </Markdown.Warn>
     </div>
@@ -452,5 +451,5 @@ let getStaticProps: Next.GetStaticProps.t<props, params> = _ctx => {
     availableCategories: availableCategories,
   }
 
-  Promise.resolved({"props": props})
+  Js.Promise.resolve({"props": props})
 }

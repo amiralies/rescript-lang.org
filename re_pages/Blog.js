@@ -7,7 +7,6 @@ import * as React from "react";
 import * as Button from "../components/Button.js";
 import * as BlogApi from "../common/BlogApi.js";
 import * as DateStr from "../common/DateStr.js";
-import * as $$Promise from "reason-promise/src/js/promise.js";
 import * as Caml_obj from "bs-platform/lib/es6/caml_obj.js";
 import * as Markdown from "../components/Markdown.js";
 import Link from "next/link";
@@ -445,7 +444,7 @@ function getStaticProps(_ctx) {
     malformed: props_malformed,
     availableCategories: props_availableCategories
   };
-  return $$Promise.resolved({
+  return Promise.resolve({
               props: props
             });
 }
